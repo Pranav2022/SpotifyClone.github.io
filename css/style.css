@@ -51,7 +51,7 @@ nav ul li{
     border-radius: 12px;
     padding: 34px;
     margin: 23px auto;
-    background-image: url('/img/bg.jpg');
+    background-image: url('img/bg.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -140,7 +140,7 @@ nav ul li{
 }
 .container-1{
     /* background-color: bisque; */
-    background-image: url("/img/inline_image_preview.jpg");
+    background-image: url("img/inline_image_preview.jpg");
     min-height: 100vh;
     background-attachment: fixed;
     background-position: center;
@@ -239,13 +239,13 @@ nav ul li{
         padding: 0 2px;
     }
     .container-1{
-        background: url("/img/pexels-photo-3721941.jpeg")no-repeat center center/cover;
+        background: url("img/pexels-photo-3721941.jpeg")no-repeat center center/cover;
     }
 }
 
 @media (max-width:580px) {
     .container-1{
-        background: url("/img/pexels-photo-3721941.jpeg")no-repeat center center/cover;
+        background: url("img/pexels-photo-3721941.jpeg")no-repeat center center/cover;
         background-repeat: round;
         align-items: center;
     }
