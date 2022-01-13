@@ -1,26 +1,26 @@
 console.log("Hello world");
 // Initializing variables
 let songIndex = 0; 
-let audioElement = new Audio('/songs/1.mp3');
+let audioElement = new Audio('songs/1.mp3');
 let mastername = document.getElementById('mastername');
 let masterPlay = document.getElementById('masterPlay');
 let myProgressBar = document.getElementById('myprogressbar')
 let songGif = document.getElementById('songGif')
 let songItem = Array.from(document.getElementsByClassName('songItem'));
 let songs=[
-    {songName :"Song",songPath : "/songs/1.mp3",songCover:"/covers/1.jpg"},
-    {songName :"Song1",songPath : "/songs/2.mp3",songCover:"/covers/2.jpg"},
-    {songName :"Song2",songPath : "/songs/3.mp3",songCover:"/covers/3.jpg"},
-    {songName :"Song3",songPath : "/songs/4.mp3",songCover:"/covers/4.jpg"},
-    {songName :"Song4",songPath : "/songs/5.mp3",songCover:"/covers/5.jpg"},
-    {songName :"Song5",songPath : "/songs/6.mp3",songCover:"/covers/6.jpg"},
-    {songName :"Song6",songPath : "/songs/7.mp3",songCover:"/covers/7.jpg"},
-    {songName :"Song7",songPath : "/songs/8.mp3",songCover:"/covers/8.jpg"},
-    {songName :"Song8",songPath : "/songs/9.mp3",songCover:"/covers/9.jpg"},
-    {songName :"Song9",songPath : "/songs/10.mp3",songCover:"/covers/10.jpg"},
-    {songName :"Kalimba",songPath : "/songs/11.mp3",songCover:"/covers/11.PNG"},
-    {songName :"Maid with the Flaxen Hair",songPath : "/songs/12.mp3",songCover:"/covers/12.PNG"},
-    {songName :"Sleep Away",songPath : "/songs/13.mp3",songCover:"/covers/13.PNG"},
+    {songName :"Song",songPath : "songs/1.mp3",songCover:"covers/1.jpg"},
+    {songName :"Song1",songPath : "songs/2.mp3",songCover:"covers/2.jpg"},
+    {songName :"Song2",songPath : "songs/3.mp3",songCover:"covers/3.jpg"},
+    {songName :"Song3",songPath : "songs/4.mp3",songCover:"covers/4.jpg"},
+    {songName :"Song4",songPath : "songs/5.mp3",songCover:"covers/5.jpg"},
+    {songName :"Song5",songPath : "songs/6.mp3",songCover:"covers/6.jpg"},
+    {songName :"Song6",songPath : "songs/7.mp3",songCover:"covers/7.jpg"},
+    {songName :"Song7",songPath : "songs/8.mp3",songCover:"covers/8.jpg"},
+    {songName :"Song8",songPath : "songs/9.mp3",songCover:"covers/9.jpg"},
+    {songName :"Song9",songPath : "songs/10.mp3",songCover:"covers/10.jpg"},
+    {songName :"Kalimba",songPath : "songs/11.mp3",songCover:"covers/11.PNG"},
+    {songName :"Maid with the Flaxen Hair",songPath : "songs/12.mp3",songCover:"covers/12.PNG"},
+    {songName :"Sleep Away",songPath : "songs/13.mp3",songCover:"covers/13.PNG"},
 ]
 // for iterating songs n image 
 songItem.forEach((element,i)=>{
@@ -93,7 +93,7 @@ Array.from(document.getElementsByClassName('songPlay')).forEach((element)=>{
             e.target.classList.remove('fa-play-circle');
             e.target.classList.add('fa-pause-circle');
             audioElement.currentTime =0;
-            audioElement.src = `/songs/${songIndex+1}.mp3`;
+            audioElement.src = `songs/${songIndex+1}.mp3`;
             // mastername.innerText = songs[songIndex].songName;
             document.getElementById('mastername').innerText = songs[songIndex].songName;
             audioElement.play();
@@ -124,7 +124,7 @@ audioElement.addEventListener('timeupdate',()=>{
     if(audioElement.currentTime == audioElement.duration){
         songIndex+=1
         console.log(songIndex)
-        audioElement.src = `/songs/${songIndex}.mp3`;
+        audioElement.src = `songs/${songIndex}.mp3`;
         mastername.innerText = songs[songIndex-1].songName;
         audioElement.currentTime = 0;
         audioElement.play();
@@ -132,7 +132,7 @@ audioElement.addEventListener('timeupdate',()=>{
     // else{
 
     //     songIndex = 0;
-    //     audioElement.src = `/songs/${songIndex}.mp3`;
+    //     audioElement.src = `songs/${songIndex}.mp3`;
     //     mastername.innerText = songs[songIndex].songName;
     //     audioElement.currentTime = 0;
     //     audioElement.play();
@@ -146,7 +146,7 @@ document.getElementById('next').addEventListener('click',()=>{
        songIndex+=1;
     }
    audioElement.currentTime =0;
-   audioElement.src = `/songs/${songIndex+1}.mp3`;
+   audioElement.src = `songs/${songIndex+1}.mp3`;
    mastername.innerText = songs[songIndex].songName;
    audioElement.play();
    masterPlay.classList.remove('fa-play-circle');
@@ -163,7 +163,7 @@ document.getElementById('previous').addEventListener('click',()=>{
        songIndex-=1;
     }
    audioElement.currentTime =0;
-   audioElement.src = `/songs/${songIndex+1}.mp3`;
+   audioElement.src = `songs/${songIndex+1}.mp3`;
    mastername.innerText = songs[songIndex].songName;
    audioElement.play();
    masterPlay.classList.remove('fa-play-circle');
